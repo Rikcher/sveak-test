@@ -13,13 +13,17 @@ interface ThemeProvider {
   readonly children: React.JSX.Element;
 }
 
-export const ThemeProvider: React.FC<ThemeProvider> = ({ children }) => {
+const ThemeProvider: React.FC<ThemeProvider> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>(defaultTheme);
 
-  //no useMemo, because I'm using react compiler
+  const updateTheme = (newTheme: Theme) => {
+    setTheme(newTheme);
+    localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
+  };
+
   const defaultValue = {
     theme,
-    setTheme,
+    setTheme: updateTheme,
   };
 
   return (
@@ -28,3 +32,5 @@ export const ThemeProvider: React.FC<ThemeProvider> = ({ children }) => {
     </ThemeContext.Provider>
   );
 };
+
+export default ThemeProvider;

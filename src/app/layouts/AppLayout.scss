@@ -1,0 +1,20 @@
+.layout {
+  background: var(--background);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  &__wrapper {
+    display: flex;
+    flex: 1 0 auto;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+  }
+  &__main {
+    flex: 1 0 auto;
+  }
+}
+

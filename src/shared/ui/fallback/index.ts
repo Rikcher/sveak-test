@@ -1,1 +1,1 @@
-export { Fallback } from './fallback'
+export { default as Fallback } from './Fallback.tsx';

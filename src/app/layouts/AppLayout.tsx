@@ -2,17 +2,23 @@ import { SkeletonTheme } from 'react-loading-skeleton';
 import { Outlet } from 'react-router-dom';
 import { Footer } from '@/widgets/footer';
 import { Header } from '@/widgets/header';
+import { Sidebar } from '@/widgets/sidebar';
 
-import './appLayout.scss';
+import './AppLayout.scss';
 
 const AppLayout = () => {
   return (
-    <div className="layout layout__wrapper">
+    <div className="layout">
       <SkeletonTheme>
-        <Header />
-        <main className="layout__content">
-          <Outlet />
-        </main>
+        <div className="layout__wrapper">
+          <Sidebar />
+          <div className="layout__content">
+            <Header />
+            <main className="layout__main">
+              <Outlet />
+            </main>
+          </div>
+        </div>
         <Footer />
       </SkeletonTheme>
     </div>

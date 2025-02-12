@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 
-import './fallback.scss';
+import './Fallback.scss';
 
-export const Fallback = () => {
+const Fallback = () => {
   return (
-    <div role="alert" className="fallback">
+    <div className="fallback">
       <h1 className="fallback__title">Something went wrong</h1>
       <Link to="/" className="fallback__link">
         Go to home page
@@ -12,3 +12,5 @@ export const Fallback = () => {
     </div>
   );
 };
+
+export default Fallback;

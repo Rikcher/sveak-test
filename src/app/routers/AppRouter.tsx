@@ -1,15 +1,14 @@
-import { AppLayout } from '@/app/layouts';
-import { HomePage } from '@/pages/home';
 import {
-  createHashRouter,
+  createBrowserRouter,
   createRoutesFromElements,
-  Link,
   Route,
   RouterProvider,
 } from 'react-router-dom';
-import { useTheme } from '@/entities/theme';
 import clsx from 'clsx';
+import { useTheme } from '@/entities/theme';
+import { AppLayout } from '@/app/layouts';
 import { Fallback } from '@/shared/ui/fallback';
+import { HomePage } from '@/pages/home';
 
 import '../styles/index.scss';
 
@@ -17,17 +16,12 @@ const AppRouter = () => {
   const { theme } = useTheme();
 
   const routers = createRoutesFromElements(
-    <Route
-      path="/"
-      element={<AppLayout />}
-      handle={{ crumb: <Link to="/">Home</Link> }}
-      errorElement={<Fallback />}
-    >
-      <Route index element={<HomePage />} />
+    <Route path="/" element={<AppLayout />} errorElement={<Fallback />}>
+      <Route element={<HomePage />} />
     </Route>
   );
 
-  const router = createHashRouter(routers, {});
+  const router = createBrowserRouter(routers, {});
 
   return (
     <div className={clsx('app', theme)}>
