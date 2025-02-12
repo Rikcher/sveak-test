@@ -1,0 +1,8 @@
+@use './themes/light.scss';
+@use './themes/dark.scss';
+@use './breakpoints' as *;
+
+.app {
+    height: 100%;
+    background: var(--white);
+}
