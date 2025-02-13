@@ -1,8 +1,23 @@
-import { useTranslation } from 'react-i18next';
+import { useRef } from 'react';
+import { useHideIncompleteRowCards, Card } from '@/entities/card';
+import './HomePage.scss';
+import { HOME_PAGE_CARDS } from '@/pages/home/config/homePageCards.ts';
 
 const HomePage = () => {
-  const { t } = useTranslation();
+  const gridRef = useRef<HTMLDivElement | null>(null);
+  const cardSelector = 'home-page__card';
 
-  return <div className="home-page">{t('HomePage.hello')}</div>;
+  useHideIncompleteRowCards({ gridRef, selector: cardSelector });
+
+  return (
+    <div className="home-page" ref={gridRef}>
+      {HOME_PAGE_CARDS.map((card, i) => (
+        <Card key={i} id={i + 1} selector={cardSelector}>
+          {card.text}
+        </Card>
+      ))}
+    </div>
+  );
 };
+
 export default HomePage;

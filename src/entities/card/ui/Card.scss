@@ -1,0 +1,19 @@
+.card {
+  background-color: var(--border);
+  text-align: start;
+  border-radius: 0.625rem;
+  height: 8rem;
+  position: relative;
+
+  &__content-wrapper {
+    font-size: 0.75rem;
+    line-height: 1.03;
+    padding: 1.25rem 1.25rem 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5.5rem;
+    box-sizing: content-box;
+    overflow: hidden;
+  }
+}
