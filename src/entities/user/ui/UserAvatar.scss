@@ -1,7 +1,18 @@
+@use '@/app/styles/utilities' as *;
+
 .user-avatar {
-  width: 2.5rem;
-  height: 2.5rem;
+  border: none;
+  background-color: transparent;
   border-radius: 100%;
-  transition: border-color 300ms ease;
-  cursor: pointer;
+  padding: 0;
+  @include focus-styles;
+
+
+  &__image {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    transition: border-color 300ms ease;
+    cursor: pointer;
+  }
 }

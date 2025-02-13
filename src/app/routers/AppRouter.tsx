@@ -17,7 +17,7 @@ const AppRouter = () => {
 
   const routers = createRoutesFromElements(
     <Route path="/" element={<AppLayout />} errorElement={<Fallback />}>
-      <Route element={<HomePage />} />
+      <Route path="/" element={<HomePage />} />
     </Route>
   );
 

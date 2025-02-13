@@ -1,20 +1,22 @@
+@use '@/app/styles/utilities' as *;
+
 .sidebar {
-  width: 310px;
-  border-right: 1px solid #e0e0e0;
+  width: 19.375rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px;
-  background-color: #f9f9f9;
+  padding: 2.5rem 1rem 2.5rem 1.75rem;
 
-  &__controls {
+  &__list {
     display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 10px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    gap: 0.2rem;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding-right: 1rem;
+
+    @include scrollbars;
+
   }
 }
 

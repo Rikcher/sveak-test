@@ -9,7 +9,22 @@ export type Link = {
 };
 
 export const LINKS: Link[] = [
-  { id: '1', label: 'text page', url: '/', icon: <LetterText /> },
-  { id: '2', label: 'images page', url: '/images', icon: <Image /> },
-  { id: '3', label: 'users page', url: '/users', icon: <SquareUser /> },
+  {
+    id: 'header-nav-link-1',
+    label: 'text page',
+    url: '/',
+    icon: <LetterText />,
+  },
+  {
+    id: 'header-nav-link-2',
+    label: 'images page',
+    url: '/images',
+    icon: <Image />,
+  },
+  {
+    id: 'header-nav-link-3',
+    label: 'users page',
+    url: '/users',
+    icon: <SquareUser />,
+  },
 ];

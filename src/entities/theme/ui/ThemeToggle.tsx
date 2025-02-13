@@ -31,13 +31,15 @@ const ThemeToggle = () => {
         },
       }}
     >
-      <Dropdown
-        menu={{ items, selectedKeys: [theme] }}
-        trigger={['click']}
-        className="theme-toggle"
-      >
-        {theme === Theme.LIGHT ? <Sun /> : <Moon />}
-      </Dropdown>
+      <button className="theme-toggle">
+        <Dropdown
+          menu={{ items, selectedKeys: [theme] }}
+          trigger={['click']}
+          className="theme-toggle__trigger"
+        >
+          {theme === Theme.LIGHT ? <Sun /> : <Moon />}
+        </Dropdown>
+      </button>
     </ConfigProvider>
   );
 };

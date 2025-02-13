@@ -3,7 +3,7 @@
     "hello": "Hello"
   },
   "Footer": {
-    "title": "What is Lorem Ipsum?",
-    "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop  publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    "title": "Что такое Lorem Ipsum?",
+    "text": "Lorem Ipsum — это просто фиктивный текст, используемый в печатной и наборной индустрии. Lorem Ipsum был стандартным фиктивным текстом в отрасли с 1500-х годов, когда неизвестный печатник взял гранку шрифта и перемешал его, чтобы создать образец книги. Он пережил не только пять столетий, но и переход в электронный набор, оставаясь практически неизменным. Он стал популярным в 1960-х годах с выпуском листов Letraset, содержащих отрывки Lorem Ipsum, а также в последнее время с появлением программ для настольных издательских систем, таких как Aldus PageMaker, включающих версии Lorem Ipsum."
   }
 }

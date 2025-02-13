@@ -1,0 +1,36 @@
+@use '@/app/styles/utilities' as *;
+
+
+.creator-profile-card {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 40px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  @include focus-styles;
+
+  &:hover {
+    background-color: rgba(var(--primary-rgb), 0.2);
+  }
+
+  &__avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    transition: border-color 300ms ease;
+    cursor: pointer;
+  }
+
+  &__name {
+    font-size: 1.25rem;
+    font-weight: 500;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

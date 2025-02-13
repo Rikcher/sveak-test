@@ -1,11 +1,42 @@
-.readers-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-  white-space: nowrap;
+@mixin focus-styles {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  transition: outline 300ms ease, background-color 300ms ease;
+
+  &:focus {
+    outline-color: var(--foreground);
+    background-color: var(--background);
+  }
+
+  &:focus:not(:focus-visible) {
+    outline-color: transparent;
+    background-color: transparent;
+  }
+
+  &:focus-visible {
+    outline-color: var(--foreground);
+    background-color: var(--background);
+  }
+}
+
+@mixin scrollbars {
+  &::-webkit-scrollbar {
+    width:  0.4rem;
+    height: 0.4rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--foreground);
+    border-radius: 9999px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--muted);
+    border-radius: 9999px;
+  }
+
+  & {
+    scrollbar-face-color: var(--foreground);
+    scrollbar-track-color:  var(--muted);
+  }
 }
