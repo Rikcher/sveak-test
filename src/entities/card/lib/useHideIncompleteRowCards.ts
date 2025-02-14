@@ -23,6 +23,11 @@ const useHideIncompleteRowCards = ({
       .getPropertyValue('grid-template-columns')
       .split(' ').length;
 
+    if (cards.length <= columnCount) {
+      cards.forEach((card) => (card.style.display = 'block'));
+      return;
+    }
+
     const incompleteRowCards = cards.length % columnCount;
     cards.forEach((card) => (card.style.display = 'block'));
 
