@@ -1,3 +1,5 @@
+@use '@/app/styles/breakpoints' as *;
+
 .layout {
   background: var(--background);
   display: flex;
@@ -8,6 +10,7 @@
     display: flex;
     flex: 1 0 auto;
     gap: 0.3125rem;
+    position: relative;
   }
   &__content {
     display: flex;
@@ -17,6 +20,23 @@
   }
   &__main {
     flex: 1 0 auto;
+    padding: 1.25rem 1.125rem;
+
+    @media (min-width: $xs) and (max-width: $sm) {
+      padding: 1.25rem 3.2rem;
+    }
+
+    @media (min-width: $sm) and (max-width: $md) {
+      padding: 1.25rem 1.25rem;
+    }
+
+    @media (min-width: $md) and (max-width: $lg) {
+      padding: 1.25rem 3.5rem;
+    }
+
+    @media (min-width: $lg) {
+      padding: 1.25rem 1.875rem;
+    }
   }
 }
 

@@ -17,7 +17,7 @@ const defaultTextCards: CardType[] = [
   { text: 'Hello world' },
 ];
 
-const cardsAmount = 71;
+const cardsAmount = 50;
 
 const getRandomCards = (source: CardType[], amount: number): CardType[] => {
   const randomCards: CardType[] = [];

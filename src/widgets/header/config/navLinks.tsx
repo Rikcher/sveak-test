@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, LetterText, SquareUser } from 'lucide-react';
+import { Image, LetterText } from 'lucide-react';
 
 export type Link = {
   id: string;
@@ -20,11 +20,5 @@ export const LINKS: Link[] = [
     label: 'images page',
     url: '/images',
     icon: <Image />,
-  },
-  {
-    id: 'header-nav-link-3',
-    label: 'users page',
-    url: '/users',
-    icon: <SquareUser />,
   },
 ];

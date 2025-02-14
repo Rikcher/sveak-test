@@ -1,3 +1,6 @@
+@use '@/app/styles/breakpoints' as *;
+
+
 .header {
   padding: 0 1.25rem;
   height: 3.75rem;
@@ -5,6 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--background);
 
   &__navigation {
     &-list {
@@ -12,6 +16,25 @@
       display: flex;
       align-items: center;
       gap: 1.5rem;
+
+      @media (max-width: $sm) {
+        gap: 0;
+        padding-left: 1.4rem;
+      }
+
+      @media (min-width: $sm) and (max-width: $md) {
+        gap: 0.5rem;
+        padding-left: 3rem;
+      }
+
+      @media (min-width: $xmd) and (max-width: $lg) {
+        gap: 1rem;
+        padding-left: 3.5rem;
+      }
+
+      @media (min-width: $md) {
+        padding-left: 0;
+      }
     }
 
     &-item {
@@ -55,5 +78,28 @@
     display: flex;
     align-items: center;
     gap: 1.5rem;
+
+    @media (min-width: $xs) and (max-width: $md) {
+      gap: 0.5rem;
+    }
+
+    @media (min-width: $xmd) and (max-width: $lg) {
+      gap: 1rem;
+    }
   }
+
+  @media (min-width: $xs) and (max-width: $sm) {
+    position: sticky;
+    top: 0;
+    z-index: 15;
+    border-bottom: 1px solid var(--border);
+  }
+
+  @media (min-width: $sm) and (max-width: $xmd) {
+    position: sticky;
+    top: 0;
+    z-index: 15;
+    border-bottom: 1px solid var(--border);
+  }
+
 }
