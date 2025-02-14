@@ -4,17 +4,18 @@ import './Card.scss';
 import clsx from 'clsx';
 
 interface CardProps {
-  id: number;
   selector: string;
   children?: React.ReactNode;
+  imageUrl?: string;
 }
 
-const Card: React.FC<CardProps> = ({ id, selector, children }) => {
+const Card: React.FC<CardProps> = ({ selector, children, imageUrl }) => {
   return (
-    <div className={clsx('card', selector)}>
-      <div className="card__content-wrapper">
-        {children ? children : `Card ${id}`}
-      </div>
+    <div
+      className={clsx('card', selector)}
+      style={{ backgroundImage: `url(${imageUrl})` }}
+    >
+      <div className="card__content-wrapper">{children}</div>
     </div>
   );
 };

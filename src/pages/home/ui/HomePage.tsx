@@ -12,7 +12,7 @@ const HomePage = () => {
   return (
     <div className="home-page" ref={gridRef}>
       {HOME_PAGE_CARDS.map((card, i) => (
-        <Card key={i} id={i + 1} selector={cardSelector}>
+        <Card key={`home-page-card-${i}`} selector={cardSelector}>
           {card.text}
         </Card>
       ))}

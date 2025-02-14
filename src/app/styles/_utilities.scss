@@ -40,3 +40,10 @@
     scrollbar-track-color:  var(--muted);
   }
 }
+
+@mixin grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8.2rem, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+}

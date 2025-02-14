@@ -1,4 +1,4 @@
-import { CardType } from '@/entities/card';
+import { CardType, getRandomCards } from '@/entities/card';
 
 const defaultTextCards: CardType[] = [
   { text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
@@ -17,16 +17,7 @@ const defaultTextCards: CardType[] = [
   { text: 'Hello world' },
 ];
 
-const cardsAmount = 5;
-
-const getRandomCards = (source: CardType[], amount: number): CardType[] => {
-  const randomCards: CardType[] = [];
-  for (let i = 0; i < amount; i++) {
-    const randomIndex = Math.floor(Math.random() * source.length);
-    randomCards.push(source[randomIndex]);
-  }
-  return randomCards;
-};
+const cardsAmount = 35;
 
 export const HOME_PAGE_CARDS: CardType[] = getRandomCards(
   defaultTextCards,

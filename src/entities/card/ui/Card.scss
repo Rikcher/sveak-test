@@ -4,6 +4,9 @@
   border-radius: 0.625rem;
   height: 8rem;
   position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   &__content-wrapper {
     font-size: 0.75rem;

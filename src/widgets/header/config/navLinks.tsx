@@ -17,8 +17,8 @@ export const LINKS: Link[] = [
   },
   {
     id: 'header-nav-link-2',
-    label: 'images page',
-    url: '/images',
+    label: 'pictures page',
+    url: '/pictures',
     icon: <Image />,
   },
 ];
