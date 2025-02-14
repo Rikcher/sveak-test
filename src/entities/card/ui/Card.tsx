@@ -15,6 +15,7 @@ const Card: React.FC<CardProps> = ({ selector, children, imageUrl }) => {
       className={clsx('card', selector)}
       style={{ backgroundImage: `url(${imageUrl})` }}
     >
+      {children && imageUrl && <div className="card__imageOverlay" />}
       <div className="card__content-wrapper">{children}</div>
     </div>
   );
